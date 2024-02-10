@@ -4,13 +4,19 @@ import "../scss/App.scss"
 import data from "../services/data.json"
 import ActorsList from './ActorsList';
 
+
 function App() {
-const [characters, setCharacters] = useState (data)
+const [characters, setCharacters] = useState (data);
+const [filterActors, setFilterActors] = useState ("");
 
   return (
     <>
-      <h1>Harry Potter</h1>
+      <div>
+      <img className="titleLogo" src="/images/harry.png" alt="Harry Potter"/>
+     </div>
+     
       <ActorsList data={characters}/>
+
     
     </>
     
