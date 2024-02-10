@@ -1,9 +1,13 @@
 
-function ActorsCard () {
+function ActorsCard ({actors}) {
     return (
-      <div>
-        <h1>Hola mundo</h1>
-      </div>
+     <article className="actorsContainer">
+
+      <img className= "actorsImage" src={actors.image} alt="" />
+      <h5>{actors.name}</h5>
+      <h5>{actors.species}</h5>
+
+     </article>
     );
   }
   

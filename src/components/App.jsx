@@ -1,11 +1,20 @@
 // Fichero src/components/App.jsx
-import './style/App.scss';
+import { useState } from 'react'
+import "../scss/App.scss"
+import data from "../services/data.json"
+import ActorsList from './ActorsList';
 
 function App() {
+const [characters, setCharacters] = useState (data)
+
   return (
-    <div>
-      <h1>Hola mundo</h1>
-    </div>
+    <>
+      <h1>Harry Potter</h1>
+      <ActorsList data={characters}/>
+    
+    </>
+    
+ 
   );
 }
 
