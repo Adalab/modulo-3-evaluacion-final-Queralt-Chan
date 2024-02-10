@@ -7,12 +7,12 @@ import ActorsList from './ActorsList';
 
 function App() {
 const [characters, setCharacters] = useState (data);
-const [filterActors, setFilterActors] = useState ("");
+const [filterActors, setFilterActors] = useState ("all");
 
   return (
     <>
       <div>
-      <img className="titleLogo" src="/images/harry.png" alt="Harry Potter"/>
+      <img className="titleLogo" src="/images/harry.png" alt=""/>
      </div>
      
       <ActorsList data={characters}/>
