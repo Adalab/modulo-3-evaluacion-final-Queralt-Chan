@@ -1,21 +1,26 @@
 import React from 'react'
+import "../../scss/App.scss";
 
-function Filter() {
+function Filter({handleHouses,handleNameFilter}) {
+
+  
   return (
-    <form>
-      <section>
+
+    <form className="inputStyle">
+    
         <div>
-          <label htmlFor="Name">Filtar por nombre</label>
+          <label htmlFor="Name">Filtrar por nombre</label>
           <input 
           type="text" 
           id="name"
           placeholder="Personajes"
+          onChange={(ev) =>  handleNameFilter (ev.target.value)}
         />
         </div>
         <div>
-          <label htmlFor="House">Filtar por casa</label>
-          <select id="housesFilter">
-            <option value="all">allHouses</option>
+          <label htmlFor="House">Filtrar por casa</label>
+          <select id="housesFilter" onChange={(ev) => handleHouses (ev.target.value)}>
+          
             <option value="Gryffindor">Gryffindor</option>
             <option value="Hufflepuff">Hufflepuff</option>
             <option value="Slytherin">Slytherin</option>
@@ -26,7 +31,7 @@ function Filter() {
 
         </div>
 
-      </section>
+    
 
     </form>
    

@@ -3,9 +3,11 @@
 import ActorsCard from "./ActorsCard";
 
 function ActorsList({data}) {
+  
     return (
   
-      <div> Characters List
+      <div className="titleStyle">
+        <h2>Characters List</h2>
         {data.map((eachActor, i)=> <ActorsCard actors= {eachActor} key={i} />)}
        
       </div>
