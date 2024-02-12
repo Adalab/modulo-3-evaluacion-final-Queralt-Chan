@@ -29,7 +29,7 @@ const handleNameFilter = (value) => {
   return (
       <>
       <div className="mainContainer">
-      <img className="titleLogo" src="/images/harry.png" alt=""/>
+      <img className="titleLogo" src="./images/harry.png" alt=""/>
      </div>
 
     <Routes>
@@ -38,7 +38,7 @@ const handleNameFilter = (value) => {
       <Route path='/'element={<><Filter handleHouses={handleHousesFilter}
       handleNameFilter={handleNameFilter}/>
       <ActorsList data={filterCharacters}/></>}></Route>
-      <Route path="/actors/:actorsid" element={< ActorsDetails />}/>
+      <Route path="/actors/:eachActor.id" element={< ActorsDetails />}/>
 
       </Routes>
 
