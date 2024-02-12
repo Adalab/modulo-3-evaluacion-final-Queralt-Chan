@@ -32,13 +32,32 @@
 
 
 
+
+.titleStyle {
+    
+    color: goldenrod;
+    background-color:black;
+    width: 100%;
+    
+
+}
+.actorsCardsContainer {
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
 .actorsContainer {
 
-    background-color:black;
-    color: goldenrod;  
+    background-color:goldenrod;
+    color: black; 
+    border-radius: 20px; 
     width: 150px;
-    height: 250px;
+    height: 190px;
     padding: 20px;
+    margin: 10px;
 
 
 .actorsImage {
@@ -48,10 +67,3 @@
 }
 
 }
-.titleStyle {
-    display:inline-block;
-   
-    color: goldenrod;
-    background-color: black;
-}
-
