@@ -2,6 +2,7 @@
 
 import ActorsCard from "./ActorsCard";
 import "../scss/App.scss";
+import { Link } from "react-router-dom";
 
 function ActorsList({data}) {
   
@@ -10,10 +11,16 @@ function ActorsList({data}) {
       <div className="titleStyle">
         <h2 className="titleActors"> Characters List</h2>
         <section className="actorsCardsContainer">
-        {data.map((eachActor, i)=> <ActorsCard actors= {eachActor} key={i} />)}
+        {data.map((eachActor, i)=> (
+        
+        <Link to={`/actors/${eachActor.id}`} key={i} ><ActorsCard actors= {eachActor}/>
+        </Link>
+        ))}
+
         </section>
-      </div>
-    );
+
+       </div>
+    )
   }
   
   export default ActorsList;
